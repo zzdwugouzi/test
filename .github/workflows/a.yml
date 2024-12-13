@@ -10,6 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: docker build --output=. .
-
-      - run: sha256sum hello
+      - working-directory: ccppaa
+        run: pwd
