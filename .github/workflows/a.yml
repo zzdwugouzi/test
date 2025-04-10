@@ -10,5 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: npm -v
+      - run: |
+             npm -v
              echo $GITHUB_WORKSPACE
