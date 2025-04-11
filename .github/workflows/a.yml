@@ -11,5 +11,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: |
+             pwd
              npm -v
              echo $GITHUB_WORKSPACE
+      - run: mkdir a && cd a && pwd
+      - run: pwd
