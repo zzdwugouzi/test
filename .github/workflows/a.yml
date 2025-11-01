@@ -15,4 +15,4 @@ jobs:
       - run: |
           ls
           Compress-Archive -Path "*.*" -DestinationPath "Draft.zip"
-
+          ls
