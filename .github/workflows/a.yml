@@ -20,3 +20,5 @@ jobs:
 
     - run: |
         ls
+        ls mingw32
+        ls mingw32/bin/
